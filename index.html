@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lintas Tri Arah</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0e0e0e;
+      color: #ffffff;
+    }
+
+    header {
+      padding: 30px;
+      text-align: center;
+      background: linear-gradient(135deg, #111, #222);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px;
+      background: #161616;
+      position: sticky;
+      top: 0;
+    }
+
+    nav button {
+      background: none;
+      border: 1px solid #444;
+      color: white;
+      padding: 8px 14px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    nav button:hover {
+      background: #333;
+    }
+
+    section {
+      display: none;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #333;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+
+    a {
+      color: #4ea3ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>LINTAS TRI ARAH</h1>
+  <p>Berbeda arah, tetap satu tujuan</p>
+</header>
+
+<nav>
+  <button onclick="openTab('home')">Utama</button>
+  <button onclick="openTab('filosofi')">Filosofi</button>
+  <button onclick="openTab('anggota')">Anggota</button>
+  <button onclick="openTab('identitas')">Identitas</button>
+</nav>
+
+<section id="home" class="active">
+  <div class="card">
+    <h3>Tentang Komunitas</h3>
+    <p>
+      Lintas Tri Arah adalah komunitas perjalanan, pemikiran, dan tujuan hidup.
+      Tiga arah berbeda, satu visi yang sama: bertumbuh dan melangkah.
+    </p>
+  </div>
+</section>
+
+<section id="filosofi">
+  <div class="card">
+    <h3>Makna & Filosofi</h3>
+    <p>
+      Logo Lintas Tri Arah melambangkan tiga individu dengan jalur berbeda,
+      namun tetap bergerak menuju satu titik tujuan.
+    </p>
+    <p>
+      Perbedaan bukan pemisah, melainkan kekuatan.
+    </p>
+  </div>
+</section>
+
+<section id="anggota">
+  <div class="card">
+    <h3>Anggota Inti</h3>
+    <ul>
+      <li><strong>Alvin</strong></li>
+      <li><strong>Fikih</strong></li>
+      <li><strong>Taufik</strong></li>
+    </ul>
+  </div>
+</section>
+
+<section id="identitas">
+  <div class="card">
+    <h3>Identitas Komunitas</h3>
+    <p>Nama: Lintas Tri Arah</p>
+    <p>Slogan: Berbeda arah, tetap satu tujuan</p>
+    <p>Status: Komunitas independen</p>
+
+    <p>
+      Instagram Komunitas:<br>
+      <a href="#" target="_blank">QR akan ditempatkan di kartu fisik</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  © Lintas Tri Arah • Komunitas & Perjalanan
+</footer>
+
+<script>
+  function openTab(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+  </html>
